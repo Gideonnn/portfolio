@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared';
 
-import { BlogComponent } from './blog.component';
+import { BlogComponent } from './containers/blog/blog.component';
 import { BlogRoutingModule } from './blog-routing.module';
 
 // Components
