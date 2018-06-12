@@ -13,11 +13,17 @@ library.add(faGithub);
 library.add(faTwitter);
 
 // Components
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { SocialIconsComponent } from './components/social-links/social-links.component';
+
+const components = [
+  NavigationComponent,
+  SocialIconsComponent,
+];
 
 @NgModule({
   declarations: [
-    SocialIconsComponent,
+    ...components,
   ],
   imports: [
     CommonModule,
@@ -27,8 +33,8 @@ import { SocialIconsComponent } from './components/social-links/social-links.com
   exports: [
     CommonModule,
     FontAwesomeModule,
-    SocialIconsComponent,
     RouterModule,
+    ...components,
   ],
 })
 export class SharedModule { }

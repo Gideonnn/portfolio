@@ -8,19 +8,11 @@
       <h2 class="description">Making something complex is easy. Making it simple is hard.</h2>
       <app-social-links></app-social-links>
     </header>
-    <nav class="nav">
-      <ul class="list">
-        <li class="item">
-          <a class="link" routerLink="about">About</a>
-        </li>
-        <li class="item">
-          <a class="link" routerLink="blog">Blog</a>
-        </li>
-        <li class="item">
-          <a class="link" routerLink="resume">Résumé</a>
-        </li>
-      </ul>
-    </nav>
+
+    <app-navigation
+      [topRight]="true">
+    </app-navigation>
+
     <section class="list">
       <div class="item ">
         <a class="url" [routerLink]="['/blog', 1]">
