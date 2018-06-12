@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../shared';
 
-import { BlogComponent } from './containers/blog/blog.component';
+import { BlogComponent } from './blog.component';
 import { BlogRoutingModule } from './blog-routing.module';
 
 // Components
-import { PostComponent } from './containers/post/post.component';
+import { ListComponent } from './components/list/list.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { PostComponent } from './containers/post/post.component';
   ],
   declarations: [
     BlogComponent,
+    ListComponent,
     PostComponent,
   ],
 })

@@ -6,7 +6,11 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// Components
 import { HomeComponent } from './home/home.component';
+
+// Modules
+import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BlogModule,
     SharedModule,
   ],
   providers: [],

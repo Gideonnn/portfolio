@@ -2,12 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Containers
-import { BlogComponent } from './containers/blog/blog.component';
-import { PostComponent } from './containers/post/post.component';
+import { BlogComponent } from './blog.component';
+import { ListComponent } from './components/list/list.component';
+import { PostComponent } from './components/post/post.component';
 
 export const ROUTES: Routes = [
-  { path: '', pathMatch: 'full', component: BlogComponent },
-  { path: ':id', component: PostComponent }
+  {
+    path: 'blog',
+    component: BlogComponent,
+    children: [
+      { path: '', component: ListComponent },
+      { path: 'post/:id', component: PostComponent },
+    ]
+  }
 ];
 
 @NgModule({
